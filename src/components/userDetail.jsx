@@ -11,29 +11,29 @@ const UserDetails = (props) => {
         }
         renderCall();
     }, []);
-  
-        const {users,match:{params:{id}}} = props;
-        const user = users.filter(e => e.id == id);
 
-        return (<div>
-            <p onClick={()=> history.push('/')}>Back</p>
-           { user && user.length &&
-           <div>
+    const { users, match: { params: { id } } } = props;
+    const user = users.filter(e => e.id == id);
+
+    return (<div>
+        <p onClick={() => history.push('/')}>Back</p>
+        {user && user.length &&
+            <div>
                 <h2>User Detail Page</h2>
                 <h5 className="mb-5">Details of {user[0].name}</h5>
                 <ul>
-                     <li>Name: {user[0].name}</li>
-                     <li>Email: {user[0].email}</li>
-                     <li>Address: {user[0].address.street}, {user[0].address.suite}, {user[0].address.city}, {user[0].address.zipcode}
-                     </li>
-                     <li>Phone: {user[0].phone}</li>
-                     <li>Website: {user[0].website}</li>
-                     <li>Company: {user[0].company.name}</li>
-                    
+                    <li>Name: {user[0].name}</li>
+                    <li>Email: {user[0].email}</li>
+                    <li>Address: {user[0].address.street}, {user[0].address.suite}, {user[0].address.city}, {user[0].address.zipcode}
+                    </li>
+                    <li>Phone: {user[0].phone}</li>
+                    <li>Website: {user[0].website}</li>
+                    <li>Company: {user[0].company.name}</li>
+
                 </ul>
-              
+
             </div>}
-            </div> )
+    </div>)
 }
 
 const mapStateToProps = state => {

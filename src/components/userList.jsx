@@ -14,6 +14,7 @@ class ListItems extends React.Component {
     }
 
     clear = () => {
+        this.setState({name: ''})
         this.props.listUsers();
     }
 
@@ -40,7 +41,8 @@ class ListItems extends React.Component {
                     </thead>
                     <tbody>
                     {
-                        userLists.length && userLists.map((user, i) => {
+                        userLists.length ?
+                         userLists.map((user, i) => {
                             return <tr key={i} onClick={() => history.push(`/userDetail/${user.id}`)}>
                                 <td>
                                     {user.name}
@@ -50,6 +52,8 @@ class ListItems extends React.Component {
                                 </td>
                             </tr>
                         })
+                        :
+                        <div>No user found!!!</div>
                     }
                     </tbody>
                 </table>

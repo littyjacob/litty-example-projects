@@ -22,7 +22,7 @@ export default function reducer(state = initialState, action) {
         case actions.SEARCH_USER_SUCCESS:
             return {
                 ...state,
-                lists: state.lists.filter(e => e.name == action.name)
+                lists: state.lists.filter(e => e.name === action.name)
             };
      
             default:

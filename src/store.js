@@ -7,7 +7,7 @@ import thunk from 'redux-thunk';
 import reducer from './reducer';
 // Initial state
 const initialState = {};
-const reducers =  combineReducers({ reducer })
+const reducers = combineReducers({ reducer })
 
 const configureStore = () => createStore(
     reducers,

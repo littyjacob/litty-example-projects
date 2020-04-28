@@ -1,6 +1,5 @@
 
 import * as actionTypes from "./constant";
-import * as Service from "./service";
 
 const data = [
     {

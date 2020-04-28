@@ -1,5 +1,5 @@
 import React from "react";
-import {Router, Route, Switch} from "react-router-dom";
+import { Router, Route, Switch } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import history from './config/history';
 import userList from './components/userList';
@@ -11,10 +11,10 @@ class App extends React.Component {
 
         return (
             <Router history={history}>
-              <Switch>
-                    <Route exact path="/" component={userList}/>
-                    <Route exact path="/userDetail/:id" component={userDetail}/>
-                    </Switch>
+                <Switch>
+                    <Route exact path="/" component={userList} />
+                    <Route exact path="/userDetail/:id" component={userDetail} />
+                </Switch>
             </Router>
         );
     }
