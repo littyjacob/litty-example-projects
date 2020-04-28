@@ -38,7 +38,7 @@ const UserDetails = (props) => {
 
 const mapStateToProps = state => {
     return {
-        users: state.reducer.lists ,
+        users: state.reducer.lists,
     };
 };
 
